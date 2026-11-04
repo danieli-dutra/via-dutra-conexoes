@@ -1,4 +1,4 @@
-// Conteúdo da abertura e do Repertório aprovados.
+// Conteúdo aprovado: abertura, Repertório e O que me impulsiona.
 export const journey = {
   "brand": "DANI DUTRA",
   "firstName": "DANI",
@@ -38,6 +38,12 @@ export const journey = {
       "id": "quem-sou",
       "short": "Quem sou",
       "question": "Como você se apresenta hoje?"
+    },
+    {
+      "id": "o-que-me-impulsiona",
+      "short": "O que me impulsiona",
+      "question": "O que te impulsiona e como isso se conecta com sua contribuição para a Globo?",
+      "title": "Experiências que encantam."
     }
   ],
   "censusCaption": "Censo 2022",
@@ -80,5 +86,94 @@ export const journey = {
         "staticLabel": "Rede estática"
       }
     }
-  ]
+  ],
+  "transition": "A tecnologia é uma evolução de tudo o que vivi.",
+  "next": "Próxima conexão",
+  "purposeConclusion": [
+    "Os produtos mudaram.",
+    "Meu propósito, não."
+  ],
+  "origin": {
+    "label": "2016 - 2019 · ONDE TUDO COMEÇOU",
+    "name": "D2B Gourmet",
+    "paragraphs": [
+      "Antes de desenvolver produtos digitais, eu já buscava criar experiências que as pessoas quisessem viver - e lembrar.",
+      "Na D2B Gourmet, transformei essa visão em negócio: da identidade visual à criação dos produtos, campanhas sazonais, embalagens, parcerias e relacionamento com clientes."
+    ],
+    "manual": "https://drive.google.com/file/d/1SkauxFmNdI4l2bcfBrTqtGt3LIsCAhYw/view",
+    "manualLabel": "Explorar identidade visual",
+    "gallery": [
+      {
+        "src": "/images/d2b-gallery/1001110257.webp",
+        "caption": "Empreendedorismo",
+        "alt": "Dani junto à mesa de produtos e decoração de Páscoa da D2B Gourmet",
+        "width": 1100,
+        "height": 733
+      },
+      {
+        "src": "/images/d2b-gallery/1001110252.webp",
+        "caption": "Identidade visual",
+        "alt": "Peça de identidade visual geométrica da D2B Gourmet",
+        "width": 1100,
+        "height": 424
+      },
+      {
+        "src": "/images/d2b-gallery/1001110264.webp",
+        "caption": "Campanhas sazonais",
+        "alt": "Campanha de expectativa para a Páscoa da D2B Gourmet",
+        "width": 1000,
+        "height": 1000
+      },
+      {
+        "src": "/images/d2b-gallery/1001110261.webp",
+        "caption": "Divulgação e parcerias",
+        "alt": "Campanha promocional da D2B Gourmet com divulgação de parceria",
+        "width": 1100,
+        "height": 846
+      },
+      {
+        "src": "/images/d2b-gallery/1001110255.webp",
+        "caption": "Experiência de produto",
+        "alt": "Presentes da D2B Gourmet para o Dia dos Namorados",
+        "width": 1000,
+        "height": 1000
+      },
+      {
+        "src": "/images/d2b-gallery/1001110267.webp",
+        "caption": "Sazonalidade",
+        "alt": "Seleção de produtos natalinos da D2B Gourmet",
+        "width": 800,
+        "height": 1000
+      }
+    ]
+  },
+  "current": {
+    "label": "2026–ATUAL · MINHA ATUAÇÃO HOJE",
+    "name": "Junta-ai",
+    "premise": "Conectando tecnologia, produto e pessoas.",
+    "paragraphs": [
+      "Participo do desenvolvimento da aplicação, da integração entre sistemas, dos testes, da documentação e das discussões sobre arquitetura e engenharia de IA, inclusive participando ativamente da configuração dos agentes. Meu papel é ajudar a transformar necessidades reais em soluções que possam ser construídas, validadas e evoluídas em equipe."
+    ],
+    "roles": [
+      "Product Ownership",
+      "Liderança de desenvolvimento",
+      "Frontend · React",
+      "UX/UI e pesquisa",
+      "Integração e APIs",
+      "Engenharia de IA · AI Service / MCP",
+      "Qualidade e documentação",
+      "Dados e métricas"
+    ],
+    "philosophyTitle": "Tecnologia que entende pessoas.",
+    "philosophy": "O Junta-ai nasceu da vontade de tornar a educação e a organização financeira mais acessíveis, por meio de uma experiência conversacional que respeita diferentes realidades.",
+    "video": {
+      "src": "/media/junta-ai-demo.mp4",
+      "poster": "/images/junta-ai-poster.webp",
+      "label": "Demonstração ilustrativa da landing do Junta-ai e prévia conversacional com dados fictícios",
+      "caption": "Demonstração ilustrativa da landing e prévia conversacional · Dados fictícios",
+      "sound": "Sem áudio · Reprodução sob seu controle",
+      "error": "Não foi possível reproduzir o vídeo.",
+      "download": "Abrir o arquivo de vídeo"
+    }
+  }
 };
