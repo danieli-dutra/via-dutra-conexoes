@@ -1,0 +1,14 @@
+/* Valores reutilizados do Creative Space, commit 0a869d5.
+   Acento usa electric-blue, corrigindo a referência indefinida violet. */
+:root {
+  --navy-900: #020c23; --navy-800: #0a142d; --navy-600: #283450;
+  --lavender-400: #ac94ff; --electric-blue-500: #00b7ff;
+  --warm-50: #fcfaf8; --warm-300: #e2d9d1; --warm-400: #c9beb5;
+  --background: var(--navy-900); --surface: var(--navy-800); --border: var(--navy-600);
+  --text-primary: var(--warm-50); --text-secondary: var(--warm-300); --text-muted: var(--warm-400);
+  --brand-primary: var(--lavender-400); --brand-accent: var(--electric-blue-500);
+  --heading-family: 'Satoshi', sans-serif; --body-family: 'Inter', sans-serif;
+  --spacing-4: .25rem; --spacing-8: .5rem; --spacing-12: .75rem; --spacing-16: 1rem;
+  --spacing-24: 1.5rem; --spacing-32: 2rem; --spacing-48: 3rem; --spacing-64: 4rem;
+  --radius-md: .75rem; --radius-lg: 1rem; --radius-full: 9999px;
+}

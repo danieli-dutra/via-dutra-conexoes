@@ -1,0 +1,6 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <title>Dani Dutra</title>
+  <!-- Mesma construção tipográfica do monograma do cabeçalho, sobre navy. -->
+  <rect width="64" height="64" rx="14" fill="#020c23"/>
+  <text x="8" y="51" font-family="Inter, Arial, sans-serif" font-size="56" font-weight="700" letter-spacing="-6.72" fill="#fcfaf8">d<tspan fill="#00b7ff">·</tspan></text>
+</svg>
