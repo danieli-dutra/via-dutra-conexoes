@@ -1,13 +1,15 @@
 ﻿import { useEffect, useState } from 'react';
 import { MotionConfig, motion, useReducedMotion } from 'motion/react';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, ArrowUp } from 'lucide-react';
 import { journey as j } from './content/journey.js';
 import Reveal from './components/Reveal.jsx';
 import JourneyMap from './components/JourneyMap.jsx';
 import ProductVideo from './components/ProductVideo.jsx';
+import ProcessCycle from './components/ProcessCycle.jsx';
 import Repertoire from './components/Repertoire.jsx';
 import D2BGallery from './components/D2BGallery.jsx';
 import './components/Purpose.css';
+import './components/Contribution.css';
 
 function Label({ index }) {
   return <p className="chapter-label"><span aria-hidden="true" />{j.sections[index].short}</p>;
@@ -99,10 +101,39 @@ function Purpose() {
   </section>;
 }
 
+function Contribution() {
+  return <section id={j.sections[2].id} className="contribution chapter" aria-labelledby="contribution-title">
+    <div className="shell">
+      <Label index={2} /><h2 className="display-title" id="contribution-title">{j.sections[2].title}<em>{j.sections[2].emphasis}</em></h2>
+      <div className="contribution-layout">
+        <div className="perspectives">
+          <p className="eyebrow">{j.evidenceLabel}</p>
+          <p className="perspectives-premise">{j.perspectivesPremise[0]}<span>{j.perspectivesPremise[1]}</span></p>
+          <svg className="knowledge-convergence" viewBox="0 0 520 126" role="img" aria-labelledby="knowledge-title">
+            <title id="knowledge-title">Arte, branding e pessoas se conectam a dados, código e inteligência artificial.</title>
+            <path d="M90 24 C210 24 280 102 414 102" />
+            <path d="M110 63 C218 63 302 24 414 24" />
+            <path d="M100 102 C220 102 286 63 414 63" />
+            <circle cx="252" cy="63" r="3" />
+            <text x="0" y="29">Arte</text><text x="0" y="68">Branding</text><text x="0" y="107">Pessoas</text>
+            <text className="knowledge-destination" x="520" y="29">Dados</text><text className="knowledge-destination" x="520" y="68">Código</text><text className="knowledge-destination" x="520" y="107">IA</text>
+          </svg>
+          <div className="perspective-concepts">{j.perspectiveConcepts.map((item, index) => <article className="perspective-concept" key={item.title} tabIndex={0} aria-labelledby={`concept-title-${index}`} aria-describedby={`concept-text-${index}`}>
+            <span className="perspective-number" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
+            <div><h3 id={`concept-title-${index}`}>{item.title}</h3><p id={`concept-text-${index}`}>{item.text}</p></div>
+          </article>)}</div>
+        </div>
+        <ProcessCycle />
+      </div>
+      <div className="closing-row"><p className="closing">{j.closing}</p><a className="back" href="#quem-sou">{j.back}<ArrowUp size={20} aria-hidden="true" /></a></div>
+    </div>
+  </section>;
+}
+
 export default function App() {
   return <MotionConfig reducedMotion="user">
     <a className="skip-link" href="#conteudo">{j.skip}</a>
     <header className="site-header shell"><a className="brand" href="#quem-sou"><b aria-hidden="true">d<span>·</span></b><span>{j.subtitle}</span></a><Navigation /></header>
-    <main id="conteudo"><Identity /><Purpose /></main>
+    <main id="conteudo"><Identity /><Purpose /><Contribution /></main>
   </MotionConfig>;
 }

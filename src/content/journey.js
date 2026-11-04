@@ -44,7 +44,8 @@ export const journey = {
       "short": "O que me impulsiona",
       "question": "O que te impulsiona e como isso se conecta com sua contribuição para a Globo?",
       "title": "Experiências que encantam."
-    }
+    },
+    { id: 'como-posso-contribuir', short: 'Como posso contribuir', question: 'Como sua trajetória se conecta com a área em que você está no processo?', title: 'A tecnologia é a base.', emphasis: 'As pessoas são o destino.' }
   ],
   "censusCaption": "Censo 2022",
   "repertoireLabel": "Repertório",
@@ -175,5 +176,17 @@ export const journey = {
       "error": "Não foi possível reproduzir o vídeo.",
       "download": "Abrir o arquivo de vídeo"
     }
-  }
+  },
+  evidenceLabel: 'O que levo para o time',
+  perspectivesPremise: ['Conexões que parecem improváveis.', 'Até fazerem sentido.'],
+  perspectiveConcepts: [
+    { title: 'Repertório que atravessa áreas', text: 'Arte, branding, comportamento, tecnologia, dados e IA. Diferentes perspectivas para enxergar o mesmo desafio.' },
+    { title: 'Curiosidade que move ideias', text: 'Questionar o óbvio, experimentar caminhos e continuar aprendendo, mesmo diante do desconhecido.' },
+    { title: 'Criatividade que vira construção', text: 'Conectar perspectivas, colaborar e transformar ideias em experiências relevantes para pessoas reais.' },
+  ],
+  process: { label: 'Como eu construo', premise: ['Ideias evoluem quando', 'pessoas constroem juntas.'], center: 'Pessoas no centro', collaboration: 'Colaboração em todo o processo', returnLabel: 'Evoluir → Entender: cada aprendizado abre uma nova pergunta.', steps: [
+    { title: 'Entender', text: 'Pessoas e contexto' }, { title: 'Explorar', text: 'Possibilidades' }, { title: 'Criar', text: 'Interfaces e código' }, { title: 'Testar', text: 'Validar e ajustar' }, { title: 'Colaborar', text: 'Trocar perspectivas' }, { title: 'Evoluir', text: 'Aprender e retornar' },
+  ] },
+  closing: 'Quero contribuir para criar experiências digitais que aproximem a Globo de diferentes públicos, unindo tecnologia, criatividade e compreensão das pessoas.',
+  back: 'Voltar ao início'
 };

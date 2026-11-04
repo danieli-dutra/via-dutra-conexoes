@@ -232,3 +232,13 @@ nav a:hover { color: var(--brand-primary); }
   .product-video figcaption { font-size: .7rem; }
   .purpose .chapter-bottom { margin-top: 28px; }
 }
+
+/* Ciclo 04: estrutura da seção de contribuição. */
+.contribution { padding-block: 72px 32px; background: radial-gradient(ellipse at 85% 53%, #1b265a50, transparent 54%); }
+.contribution-layout { display: grid; grid-template-columns: minmax(300px, .85fr) minmax(0, 1.3fr); gap: 64px; align-items: center; margin-top: 56px; }
+.closing-row { display: flex; justify-content: space-between; align-items: end; gap: 32px; margin-top: 56px; padding-top: 40px; }
+.closing { font: 500 clamp(1.8rem, 3vw, 2.8rem)/1.15 var(--heading-family); letter-spacing: -.035em; color: var(--text-primary); max-width: 29ch; }
+.back { display: flex; align-items: center; gap: 20px; color: var(--brand-primary); font-size: .8rem; white-space: nowrap; padding-block: 12px; }
+@media (max-width: 650px) {
+  .contribution { padding-block: 48px 24px; }
+}
