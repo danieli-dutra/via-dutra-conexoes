@@ -1,4 +1,4 @@
-// Conteúdo da abertura aprovada no Ciclo 01.
+// Conteúdo da abertura e do Repertório aprovados.
 export const journey = {
   "brand": "DANI DUTRA",
   "firstName": "DANI",
@@ -38,6 +38,47 @@ export const journey = {
       "id": "quem-sou",
       "short": "Quem sou",
       "question": "Como você se apresenta hoje?"
+    }
+  ],
+  "censusCaption": "Censo 2022",
+  "repertoireLabel": "Repertório",
+  "repertoire": [
+    "Lugares ampliam o olhar.",
+    "Pessoas transformam o caminho."
+  ],
+  "experiences": [
+    {
+      "name": "eSports",
+      "theme": "Liderar & conectar",
+      "text": "Estratégia, comunicação e liderança com pessoas de diferentes regiões do Brasil.",
+      "image": "/images/sportv-citizens.webp",
+      "alt": "Equipe feminina Citizens WFC apresentada na reportagem do SporTV",
+      "credit": "Foto: Citizens Brasil · SporTV, 2019",
+      "report": {
+        "source": "SporTV · 18 set. 2019",
+        "title": "Uma equipe feminina abrindo caminhos no Pro Clubs.",
+        "context": "A reportagem apresenta a primeira line 100% feminina do Brasil e identifica Danieli “CTZ I Dutra” como capitã.",
+        "url": "https://sportv.globo.com/site/e-sportv/fifa/noticia/fifa-pro-clubs-equipe-lanca-primeira-line-100percent-feminina-do-brasil.ghtml",
+        "link": "Ler a reportagem no SporTV"
+      }
+    },
+    {
+      "name": "IBGE",
+      "theme": "Dados & realidades",
+      "text": "No Censo, entendi que por trás dos dados existem pessoas e histórias.",
+      "image": "/images/ibge.webp",
+      "alt": "Registro da experiência de Dani no Censo 2022 do IBGE"
+    },
+    {
+      "name": "Conexões que atravessam o Brasil.",
+      "theme": "Construir em conjunto",
+      "text": "Pessoas de diferentes regiões, realidades e trajetórias. Construir em conjunto também é conectar perspectivas.",
+      "visual": {
+        "caption": "Conexões humanas · representação conceitual",
+        "pauseLabel": "Pausar movimento",
+        "resumeLabel": "Retomar movimento",
+        "staticLabel": "Rede estática"
+      }
     }
   ]
 };

@@ -1,6 +1,7 @@
 import { MotionConfig, motion, useReducedMotion } from 'motion/react';
 import { journey as j } from './content/journey.js';
 import JourneyMap from './components/JourneyMap.jsx';
+import Repertoire from './components/Repertoire.jsx';
 
 function Label({ index }) {
   return <p className="chapter-label"><span aria-hidden="true" />{j.sections[index].short}</p>;
@@ -23,6 +24,7 @@ function Identity() {
           <JourneyMap />
         </div>
       </div>
+      <Repertoire />
     </div>
   </section>;
 }
