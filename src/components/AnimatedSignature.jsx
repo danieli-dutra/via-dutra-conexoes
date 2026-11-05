@@ -1,5 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
-import { useInView } from 'motion/react';
+import { useEffect, useState } from 'react';
 import './AnimatedSignature.css';
 
 // Traços centrais autorais, na ordem de escrita; não são contornos de uma fonte.
@@ -31,10 +30,48 @@ const scheduledStrokes = penStrokes.map((stroke, index) => {
   return scheduled;
 });
 
-export default function AnimatedSignature({ triggerRef }) {
-  const signatureRef = useRef(null);
-  const visible = useInView(triggerRef || signatureRef, { once: true, amount: .18 });
+export default function AnimatedSignature() {
+  const [started, setStarted] = useState(false);
   const [complete, setComplete] = useState(() => typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+
+  useEffect(() => {
+    if (started || complete) return;
+    let frame = 0;
+    const measure = () => ({
+      top: window.scrollY,
+      height: window.innerHeight,
+      width: window.innerWidth,
+      documentHeight: document.scrollingElement.scrollHeight,
+    });
+    let previous = measure();
+    const checkBottom = () => {
+      frame = 0;
+      const current = measure();
+      const geometryChanged = current.height !== previous.height || current.width !== previous.width || current.documentHeight !== previous.documentHeight;
+      const movedDown = current.top > previous.top;
+      previous = current;
+      // Só rolagem descendente em uma geometria estável pode iniciar a escrita.
+      if (geometryChanged || !movedDown || current.top <= 0) return;
+      const tolerance = Math.min(40, Math.max(8, current.height * .03));
+      if (current.documentHeight - current.height - current.top <= tolerance) setStarted(true);
+    };
+    const onScroll = () => { if (!frame) frame = requestAnimationFrame(checkBottom); };
+    const refreshGeometry = () => {
+      if (frame) cancelAnimationFrame(frame);
+      frame = 0;
+      previous = measure();
+    };
+    const observer = typeof ResizeObserver !== 'undefined' ? new ResizeObserver(refreshGeometry) : null;
+    observer?.observe(document.body);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', refreshGeometry);
+    return () => {
+      if (frame) cancelAnimationFrame(frame);
+      observer?.disconnect();
+      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('resize', refreshGeometry);
+    };
+  }, [started, complete]);
 
   useEffect(() => {
     const preference = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -43,7 +80,7 @@ export default function AnimatedSignature({ triggerRef }) {
     return () => preference.removeEventListener('change', finish);
   }, []);
 
-  return <div className="animated-signature" ref={signatureRef} data-state={complete ? 'complete' : visible ? 'drawing' : 'idle'}>
+  return <div className="animated-signature" data-state={complete ? 'complete' : started ? 'drawing' : 'idle'}>
     <svg viewBox="0 0 680 190" width="680" height="190" role="img" aria-label="Danieli Dutra"
       onAnimationEnd={event => { if (event.target.dataset.signatureLast === 'true') setComplete(true); }}>
       <g fill="none" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">

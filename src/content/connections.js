@@ -1,4 +1,4 @@
-// URLs copiadas de referências identificadas no Creative Space (somente leitura).
+// URLs de referências identificadas no Creative Space e fornecidas pela autora.
 // A primeira imagem é protagonista. Acrescente até cinco registros com src e alt.
 // images: [] mantém a experiência disponível enquanto aguarda fotografias.
 // plannedImageCount registra a curadoria futura; o layout usa só imagens disponíveis.
@@ -38,42 +38,72 @@ export const connectionPhotos = {
   },
   academy: {
     plannedImageCount: 5,
-    images: [], // Aguardar a fotografia específica do evento da Copa com várias telas.
+    images: [
+      { src: 'https://res.cloudinary.com/bvyzj2l7/image/upload/v1793848626/IMG_20260819_101312158_HDR_3.jpg', alt: 'Primeiro registro pessoal da experiência na Academia LED.' },
+      { src: 'https://res.cloudinary.com/bvyzj2l7/image/upload/v1793848625/IMG_20261015_122440_969_2.jpg', alt: 'Segundo registro pessoal da experiência na Academia LED.' },
+      { src: 'https://res.cloudinary.com/bvyzj2l7/image/upload/v1793848702/IMG_20261015_122508_370_1.jpg', alt: 'Terceiro registro pessoal da experiência na Academia LED.' },
+    ],
     caption: 'Academia LED · Encontro com a Copa', alt: 'Registro pessoal do evento da Copa na Academia LED, com várias telas.', format: 'landscape', position: 'center',
   },
   marathon: {
     plannedImageCount: 3,
     images: [
       { src: 'https://res.cloudinary.com/bvyzj2l7/image/upload/v1789662044/WhatsApp_Image_2026-09-17_at_08.29.42.jpg', alt: 'Registro pessoal da Maratona de IA da Academia LED.' },
+      { src: 'https://res.cloudinary.com/bvyzj2l7/image/upload/v1789662044/WhatsApp_Image_2026-09-17_at_13.19.31.jpg', alt: 'Registro da Academia LED associado à Maratona de IA.' },
+      { src: 'https://res.cloudinary.com/bvyzj2l7/image/upload/v1793848853/Du.png', alt: 'Du, personagem autoral da Maratona de IA.', fit: 'contain' },
     ],
     caption: 'Academia LED · Maratona de IA', alt: 'Registro pessoal da Maratona de IA da Academia LED.', format: 'landscape', position: 'center',
   },
   du: {
     plannedImageCount: 2,
-    images: [], caption: 'Du · Personagem autoral da Maratona de IA', alt: 'Du, personagem autoral criado para a Maratona de IA.', format: 'portrait', position: 'center', fit: 'contain',
+    images: [
+      { src: 'https://res.cloudinary.com/bvyzj2l7/image/upload/v1793848853/Du.png', alt: 'Du, personagem autoral da autora.' },
+      { src: 'https://res.cloudinary.com/bvyzj2l7/image/upload/v1789662044/WhatsApp_Image_2026-09-17_at_13.19.31.jpg', alt: 'Registro da Academia LED relacionado à criação de Du.' },
+    ], caption: 'Du · Personagem autoral da Maratona de IA', alt: 'Du, personagem autoral criado para a Maratona de IA.', format: 'portrait', position: 'center', fit: 'contain',
   },
   renato: {
     plannedImageCount: 2,
-    images: [], caption: 'Renato Winning · Brand Session', alt: 'Fotografia da publicação pessoal da autora sobre a Brand Session com Renato Winning.', format: 'landscape', position: 'center',
+    images: [
+      { src: 'https://res.cloudinary.com/bvyzj2l7/image/upload/v1793846813/IMG_20260805_140949443_HDR.jpg', alt: 'Primeiro registro pessoal da experiência com Renato Winning.' },
+      { src: 'https://res.cloudinary.com/bvyzj2l7/image/upload/v1793846892/IMG_20260805_133616164_HDR.jpg', alt: 'Segundo registro pessoal da experiência com Renato Winning.' },
+    ], caption: 'Renato Winning · Brand Session', alt: 'Fotografia da publicação pessoal da autora sobre a Brand Session com Renato Winning.', format: 'landscape', position: 'center',
   },
   brand: {
     plannedImageCount: 2,
-    images: [], caption: 'Brand Session Workshop', alt: 'Registro pessoal da experiência no Brand Session Workshop.', format: 'landscape', position: 'center',
+    images: [
+      { src: 'https://res.cloudinary.com/bvyzj2l7/image/upload/v1793848243/1790081787795.jpg', alt: 'Primeiro registro da experiência Brand Session Workshop.' },
+      { src: 'https://res.cloudinary.com/bvyzj2l7/image/upload/v1793847087/Branding_Session.jpg', alt: 'Segundo registro da experiência Brand Session Workshop.' },
+    ], caption: 'Brand Session Workshop', alt: 'Registro pessoal da experiência no Brand Session Workshop.', format: 'landscape', position: 'center',
   },
   flamengo: {
-    images: [], // Fotografia pessoal da autora com Zico; URL será fornecida pela autora.
+    images: [
+      { src: 'https://res.cloudinary.com/bvyzj2l7/image/upload/v1793848276/513899060_24050981917892631_6491232706242655407_n.jpg', alt: 'Primeira memória pessoal da autora relacionada ao Flamengo.' },
+      { src: 'https://res.cloudinary.com/bvyzj2l7/image/upload/v1793848264/IMG_20260625_210425340.jpg', alt: 'Segunda memória pessoal da autora relacionada ao Flamengo.' },
+    ],
     caption: 'Flamengo · Meu encontro com Zico', alt: 'Dani Dutra ao lado de Zico em um encontro pessoal.', format: 'portrait', position: 'center',
   },
   cartola: {
-    images: [], caption: 'CartolaFC · Uma conexão com o produto', alt: 'Registro pessoal da experiência da autora como usuária do CartolaFC.', format: 'portrait', position: 'center',
+    images: [
+      { src: 'https://res.cloudinary.com/bvyzj2l7/image/upload/v1793848913/Screenshot_20261104-192926_2.jpg', alt: 'Registro pessoal da experiência da autora como usuária do CartolaFC.', fit: 'contain' },
+    ], caption: 'CartolaFC · Uma conexão com o produto', alt: 'Registro pessoal da experiência da autora como usuária do CartolaFC.', format: 'portrait', position: 'center',
   },
   passion: {
     plannedImageCount: 4, maxImages: 4, revealWhenEmpty: true, emptyMessage: 'Memórias em breve',
-    images: [], caption: 'Paixão', alt: 'Registro pessoal de uma paixão na trajetória da autora.', format: 'landscape', position: 'center',
+    images: [
+      { src: 'https://res.cloudinary.com/bvyzj2l7/image/upload/v1793847279/514044045_24040447752279381_185136106713156614_n.jpg', alt: 'Primeira memória pessoal da autora na coleção Paixão.' },
+      { src: 'https://res.cloudinary.com/bvyzj2l7/image/upload/v1793847280/509431199_23958421253815365_3349002062287306242_n.jpg', alt: 'Segunda memória pessoal da autora na coleção Paixão.' },
+      { src: 'https://res.cloudinary.com/bvyzj2l7/image/upload/v1793846813/IMG_20260807_171030006_HDR.jpg', alt: 'Terceira memória pessoal da autora na coleção Paixão.' },
+      { src: 'https://res.cloudinary.com/bvyzj2l7/image/upload/v1793848137/IMG_20261101_151132420_2.jpg', alt: 'Quarta memória pessoal da autora na coleção Paixão.' },
+    ], caption: 'Paixão', alt: 'Registro pessoal de uma paixão na trajetória da autora.', format: 'landscape', position: 'center',
   },
   sports: {
-    plannedImageCount: 3, maxImages: 3, revealWhenEmpty: true, emptyMessage: 'Memórias em breve',
-    images: [], caption: 'Esportes', alt: 'Registro pessoal de uma experiência com esportes.', format: 'landscape', position: 'center',
+    plannedImageCount: 4, maxImages: 4, revealWhenEmpty: true, emptyMessage: 'Memórias em breve',
+    images: [
+      { src: 'https://res.cloudinary.com/bvyzj2l7/image/upload/v1793847278/48383800_1980692048681601_3482566612689616896_n.jpg', alt: 'Primeiro registro pessoal da autora na coleção Esportes.' },
+      { src: 'https://res.cloudinary.com/bvyzj2l7/image/upload/v1793847277/499479137_9948150081935718_7281703388109730302_n.jpg', alt: 'Segundo registro pessoal da autora na coleção Esportes.' },
+      { src: 'https://res.cloudinary.com/bvyzj2l7/image/upload/v1793847277/49938711_2021987241218748_2869056196885610496_n.jpg', alt: 'Terceiro registro pessoal da autora na coleção Esportes.' },
+      { src: 'https://res.cloudinary.com/bvyzj2l7/image/upload/v1793847276/66586690_2321651627918973_1504595054595932160_n.jpg', alt: 'Quarto registro pessoal da autora na coleção Esportes.' },
+    ], caption: 'Esportes', alt: 'Registro pessoal de uma experiência com esportes.', format: 'landscape', position: 'center',
   },
 };
 

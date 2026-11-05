@@ -19,7 +19,6 @@ export default function ConnectionCloud({ words = connectionWords, photos = conn
   const [focused, setFocused] = useState(null);
   const [selected, setSelected] = useState(null);
   const buttons = useRef({});
-  const closingRef = useRef(null);
   const reduce = useReducedMotion();
   const active = hovered ?? focused ?? selected;
   const word = words.find(item => item.id === active);
@@ -82,12 +81,12 @@ export default function ConnectionCloud({ words = connectionWords, photos = conn
           <p className="connections__sr-only" role="status">{photo ? `${photo.caption}${getMemoryImages(photo.images).length ? '' : '. Fotografias em breve.'}` : ''}</p>
         </div>
       </div>
-      <div className="connections__closing" ref={closingRef}>
+      <div className="connections__closing">
         <p className="connections__closing-lead">{copy.closing[0]}</p>
         <p className="connections__closing-intent">{copy.closing[1]}</p>
         <p className="connections__closing-emphasis">{copy.closing[2]}</p>
         <p className="connections__closing-thought">{copy.closing[3]}</p>
-        <AnimatedSignature triggerRef={closingRef} />
+        <AnimatedSignature />
       </div>
     </div>
   </section>;
