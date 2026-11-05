@@ -1,0 +1,84 @@
+﻿.brazil-connections {
+  width: 100%;
+  max-width: 366px;
+  margin: 10px auto 0;
+}
+.brazil-connections > svg { display: block; width: 100%; height: auto; aspect-ratio: 1; overflow: visible; }
+/* Base vazada e contínua: a leitura da geografia não depende do acendimento. */
+.brazil-border-base { fill: none; stroke: var(--brand-primary); stroke-opacity: .4; stroke-width: .9; stroke-linejoin: round; stroke-linecap: round; }
+.brazil-region { fill: none; opacity: .22; }
+.brazil-region > .brazil-region-halo { display: none; }
+.brazil-region-spotlight { fill: none; animation: brazil-spotlight var(--spotlight-duration) ease-in-out both; }
+.brazil-region-echo { fill: none; opacity: .2; animation: brazil-echo .7s ease-out forwards; }
+.brazil-active-isolation { fill: none; stroke: var(--background); stroke-width: 1.8; stroke-linejoin: round; stroke-linecap: round; }
+.brazil-flow { opacity: .72; }
+.brazil-region-color[data-region="norte"] { --region-neon: #66e3bb; }
+.brazil-region-color[data-region="nordeste"] { --region-neon: var(--brand-accent); }
+.brazil-region-color[data-region="centro-oeste"] { --region-neon: #87ceff; }
+.brazil-region-color[data-region="sudeste"] { --region-neon: var(--brand-primary); }
+.brazil-region-color[data-region="sul"] { --region-neon: #e18cdb; }
+.brazil-region-core { fill: none; stroke: var(--region-neon); stroke-width: 1.2; stroke-linecap: round; stroke-linejoin: round; }
+.brazil-region-halo { fill: none; stroke: var(--region-neon); stroke-width: 3; stroke-opacity: .32; stroke-linecap: round; stroke-linejoin: round; pointer-events: none; }
+.brazil-connection-base { fill: none; stroke: var(--brand-primary); stroke-opacity: .19; stroke-width: .9; }
+.brazil-connection { fill: none; stroke: var(--brand-accent); stroke-opacity: .22; stroke-width: 1; stroke-linecap: round; }
+.brazil-traveler {
+  fill: none;
+  stroke: var(--brand-accent);
+  stroke-width: 1.65;
+  stroke-linecap: round;
+  stroke-dasharray: var(--trail-size) 1;
+  stroke-dashoffset: .28;
+  opacity: .65;
+  animation: brazil-travel var(--journey-duration) ease-in-out var(--journey-phase) infinite;
+}
+/* Marcadores simples, cianos e com recorte navy, como no mapa do Hero. */
+.brazil-node { fill: var(--brand-accent); stroke: var(--background); stroke-width: 1.8; }
+.brazil-node-halo { fill: var(--brand-accent); opacity: .08; transform-box: fill-box; transform-origin: center; animation: brazil-breathe 8s ease-in-out var(--node-delay) infinite; }
+.brazil-connections[data-running="false"] .brazil-region-spotlight,
+.brazil-connections[data-running="false"] .brazil-region-echo,
+.brazil-connections[data-running="false"] .brazil-traveler,
+.brazil-connections[data-running="false"] .brazil-node-halo { animation-play-state: paused; }
+.brazil-footer { display: flex; flex-direction: column; align-items: center; gap: 6px; margin-top: 4px; }
+.brazil-footer figcaption { color: var(--text-secondary); font-size: .77rem; text-align: center; line-height: 1.5; }
+.brazil-footer button { color: var(--text-secondary); background: transparent; border: 0; padding: 6px 8px; min-height: 32px; font: inherit; font-size: .72rem; text-decoration: underline; text-underline-offset: 4px; cursor: pointer; }
+.brazil-footer button:hover { color: var(--brand-accent); }
+.brazil-footer button:focus-visible { outline: 2px solid var(--brand-accent); outline-offset: 2px; border-radius: 3px; }
+.brazil-footer button:disabled { color: var(--text-muted); cursor: default; text-decoration: none; }
+/* Uma única protagonista por vez. A transição anterior já está discreta
+   quando a nova cor chega ao pico, sem somar halos nas fronteiras. */
+@keyframes brazil-spotlight {
+  0% { opacity: .2; }
+  6% { opacity: .42; }
+  10% { opacity: .3; }
+  20% { opacity: .9; }
+  28%, 65% { opacity: 1; }
+  83% { opacity: .64; }
+  100% { opacity: .2; }
+}
+@keyframes brazil-echo {
+  from { opacity: .2; }
+  to { opacity: 0; }
+}
+@keyframes brazil-travel {
+  0% { stroke-dashoffset: .28; opacity: 0; }
+  12% { opacity: .8; }
+  40% { opacity: .8; }
+  57% { stroke-dashoffset: -1.28; opacity: 0; }
+  100% { stroke-dashoffset: -1.28; opacity: 0; }
+}
+@keyframes brazil-breathe {
+  0%, 100% { opacity: .06; transform: scale(1); }
+  50% { opacity: .11; transform: scale(1.12); }
+}
+@media (max-width: 650px) {
+  .brazil-connections { max-width: 366px; margin-top: 12px; }
+  .brazil-footer figcaption { font-size: .78rem; }
+  .brazil-footer button { font-size: .75rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .brazil-region { animation: none; opacity: .76; }
+  .brazil-region > .brazil-region-halo { display: block; stroke-opacity: .12; }
+  .brazil-flow { opacity: .9; }
+  .brazil-traveler { display: none; }
+  .brazil-node-halo { animation: none; opacity: .08; }
+}

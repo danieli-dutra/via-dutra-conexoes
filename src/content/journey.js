@@ -1,4 +1,4 @@
-// Conteúdo da abertura aprovada no Ciclo 01.
+// Conteúdo aprovado: abertura, Repertório e O que me impulsiona.
 export const journey = {
   "brand": "DANI DUTRA",
   "firstName": "DANI",
@@ -38,6 +38,155 @@ export const journey = {
       "id": "quem-sou",
       "short": "Quem sou",
       "question": "Como você se apresenta hoje?"
+    },
+    {
+      "id": "o-que-me-impulsiona",
+      "short": "O que me impulsiona",
+      "question": "O que te impulsiona e como isso se conecta com sua contribuição para a Globo?",
+      "title": "Experiências que encantam."
+    },
+    { id: 'como-posso-contribuir', short: 'Como posso contribuir', question: 'Como sua trajetória se conecta com a área em que você está no processo?', title: 'A tecnologia é a base.', emphasis: 'As pessoas são o destino.' }
+  ],
+  "censusCaption": "Censo 2022",
+  "repertoireLabel": "Repertório",
+  "repertoire": [
+    "Lugares ampliam o olhar.",
+    "Pessoas transformam o caminho."
+  ],
+  "experiences": [
+    {
+      "name": "eSports",
+      "theme": "Liderar & conectar",
+      "text": "Estratégia, comunicação e liderança com pessoas de diferentes regiões do Brasil.",
+      "image": "/images/sportv-citizens.webp",
+      "alt": "Equipe feminina Citizens WFC apresentada na reportagem do SporTV",
+      "credit": "Foto: Citizens Brasil · SporTV, 2019",
+      "report": {
+        "source": "SporTV · 18 set. 2019",
+        "title": "Uma equipe feminina abrindo caminhos no Pro Clubs.",
+        "context": "A reportagem apresenta a primeira line 100% feminina do Brasil e identifica Danieli “CTZ I Dutra” como capitã.",
+        "url": "https://sportv.globo.com/site/e-sportv/fifa/noticia/fifa-pro-clubs-equipe-lanca-primeira-line-100percent-feminina-do-brasil.ghtml",
+        "link": "Ler a reportagem no SporTV"
+      }
+    },
+    {
+      "name": "IBGE",
+      "theme": "Dados & realidades",
+      "text": "No Censo, entendi que por trás dos dados existem pessoas e histórias.",
+      "image": "/images/ibge.webp",
+      "alt": "Registro da experiência de Dani no Censo 2022 do IBGE"
+    },
+    {
+      "name": "Conexões que atravessam o Brasil.",
+      "theme": "Construir em conjunto",
+      "text": "Pessoas de diferentes regiões, realidades e trajetórias. Construir em conjunto também é conectar perspectivas.",
+      "visual": {
+        "caption": "Conexões humanas · representação conceitual",
+        "pauseLabel": "Pausar movimento",
+        "resumeLabel": "Retomar movimento",
+        "staticLabel": "Rede estática"
+      }
     }
-  ]
+  ],
+  "transition": "A tecnologia é uma evolução de tudo o que vivi.",
+  "next": "Próxima conexão",
+  "purposeConclusion": [
+    "Os produtos mudaram.",
+    "Meu propósito, não."
+  ],
+  "origin": {
+    "label": "2016 - 2019 · ONDE TUDO COMEÇOU",
+    "name": "D2B Gourmet",
+    "paragraphs": [
+      "Antes de desenvolver produtos digitais, eu já buscava criar experiências que as pessoas quisessem viver - e lembrar.",
+      "Na D2B Gourmet, transformei essa visão em negócio: da identidade visual à criação dos produtos, campanhas sazonais, embalagens, parcerias e relacionamento com clientes."
+    ],
+    "manual": "https://drive.google.com/file/d/1SkauxFmNdI4l2bcfBrTqtGt3LIsCAhYw/view",
+    "manualLabel": "Explorar identidade visual",
+    "gallery": [
+      {
+        "src": "/images/d2b-gallery/1001110257.webp",
+        "caption": "Empreendedorismo",
+        "alt": "Dani junto à mesa de produtos e decoração de Páscoa da D2B Gourmet",
+        "width": 1100,
+        "height": 733
+      },
+      {
+        "src": "/images/d2b-gallery/1001110252.webp",
+        "caption": "Identidade visual",
+        "alt": "Peça de identidade visual geométrica da D2B Gourmet",
+        "width": 1100,
+        "height": 424
+      },
+      {
+        "src": "/images/d2b-gallery/1001110264.webp",
+        "caption": "Campanhas sazonais",
+        "alt": "Campanha de expectativa para a Páscoa da D2B Gourmet",
+        "width": 1000,
+        "height": 1000
+      },
+      {
+        "src": "/images/d2b-gallery/1001110261.webp",
+        "caption": "Divulgação e parcerias",
+        "alt": "Campanha promocional da D2B Gourmet com divulgação de parceria",
+        "width": 1100,
+        "height": 846
+      },
+      {
+        "src": "/images/d2b-gallery/1001110255.webp",
+        "caption": "Experiência de produto",
+        "alt": "Presentes da D2B Gourmet para o Dia dos Namorados",
+        "width": 1000,
+        "height": 1000
+      },
+      {
+        "src": "/images/d2b-gallery/1001110267.webp",
+        "caption": "Sazonalidade",
+        "alt": "Seleção de produtos natalinos da D2B Gourmet",
+        "width": 800,
+        "height": 1000
+      }
+    ]
+  },
+  "current": {
+    "label": "2026–ATUAL · MINHA ATUAÇÃO HOJE",
+    "name": "Junta-ai",
+    "premise": "Conectando tecnologia, produto e pessoas.",
+    "paragraphs": [
+      "Participo do desenvolvimento da aplicação, da integração entre sistemas, dos testes, da documentação e das discussões sobre arquitetura e engenharia de IA, inclusive participando ativamente da configuração dos agentes. Meu papel é ajudar a transformar necessidades reais em soluções que possam ser construídas, validadas e evoluídas em equipe."
+    ],
+    "roles": [
+      "Product Ownership",
+      "Liderança de desenvolvimento",
+      "Frontend · React",
+      "UX/UI e pesquisa",
+      "Integração e APIs",
+      "Engenharia de IA · AI Service / MCP",
+      "Qualidade e documentação",
+      "Dados e métricas"
+    ],
+    "philosophyTitle": "Tecnologia que entende pessoas.",
+    "philosophy": "O Junta-ai nasceu da vontade de tornar a educação e a organização financeira mais acessíveis, por meio de uma experiência conversacional que respeita diferentes realidades.",
+    "video": {
+      "src": "/media/junta-ai-demo.mp4",
+      "poster": "/images/junta-ai-poster.webp",
+      "label": "Demonstração ilustrativa da landing do Junta-ai e prévia conversacional com dados fictícios",
+      "caption": "Demonstração ilustrativa da landing e prévia conversacional · Dados fictícios",
+      "sound": "Sem áudio · Reprodução sob seu controle",
+      "error": "Não foi possível reproduzir o vídeo.",
+      "download": "Abrir o arquivo de vídeo"
+    }
+  },
+  evidenceLabel: 'O que levo para o time',
+  perspectivesPremise: ['Conexões que parecem improváveis.', 'Até fazerem sentido.'],
+  perspectiveConcepts: [
+    { title: 'Repertório que atravessa áreas', text: 'Arte, branding, comportamento, tecnologia, dados e IA. Diferentes perspectivas para enxergar o mesmo desafio.' },
+    { title: 'Curiosidade que move ideias', text: 'Questionar o óbvio, experimentar caminhos e continuar aprendendo, mesmo diante do desconhecido.' },
+    { title: 'Criatividade que vira construção', text: 'Conectar perspectivas, colaborar e transformar ideias em experiências relevantes para pessoas reais.' },
+  ],
+  process: { label: 'Como eu construo', premise: ['Ideias evoluem quando', 'pessoas constroem juntas.'], center: 'Pessoas no centro', collaboration: 'Colaboração em todo o processo', returnLabel: 'Evoluir → Entender: cada aprendizado abre uma nova pergunta.', steps: [
+    { title: 'Entender', text: 'Pessoas e contexto' }, { title: 'Explorar', text: 'Possibilidades' }, { title: 'Criar', text: 'Interfaces e código' }, { title: 'Testar', text: 'Validar e ajustar' }, { title: 'Colaborar', text: 'Trocar perspectivas' }, { title: 'Evoluir', text: 'Aprender e retornar' },
+  ] },
+  closing: 'Quero contribuir para criar experiências digitais que aproximem a Globo de diferentes públicos, unindo tecnologia, criatividade e compreensão das pessoas.',
+  back: 'Voltar ao início'
 };
