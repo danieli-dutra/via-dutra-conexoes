@@ -1,7 +1,7 @@
 .connections { padding-block: 104px 72px; }
 .connections__intro { max-width: 1120px; }
-.connections__description { margin-top: 28px; font-size: 1.05rem; }
-.connections__hint { margin-top: 16px; font-size: .78rem; color: var(--text-muted); }
+.connections__description { margin-top: 28px; font-size: 1.1875rem; }
+.connections__hint { margin-top: 16px; font-size: var(--font-caption); color: var(--text-muted); }
 .connections__touch-hint { display: none; }
 .connection-cloud { max-width: 1300px; margin: 64px auto 0; }
 .connection-cloud__words { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 30px clamp(24px, 3vw, 44px); padding-block: 18px; }
@@ -34,7 +34,7 @@ button.connection-word:focus-visible { outline: 2px solid #65d0ff; outline-offse
 .connections__closing-lead { font: 700 clamp(2.1rem, 3.2vw, 3.4rem)/1.15 var(--heading-family); letter-spacing: -.04em; color: var(--text-primary); }
 .connections__closing-intent { font: 500 clamp(1.2rem, 1.85vw, 1.65rem)/1.5 var(--heading-family); color: var(--text-secondary); max-width: 54ch; margin: 28px auto 0; }
 .connections__closing-emphasis { font: 500 clamp(1.5rem, 2.4vw, 2.25rem)/1.25 var(--heading-family); letter-spacing: -.03em; color: var(--brand-primary); max-width: 38ch; margin: 36px auto 0; }
-.connections__closing-thought { font-size: clamp(1.02rem, 1.4vw, 1.25rem); line-height: 1.7; color: var(--text-secondary); max-width: 64ch; margin: 24px auto 0; }
+.connections__closing-thought { font-size: clamp(1.125rem, 1.55vw, 1.4rem); line-height: 1.7; color: var(--text-secondary); max-width: 64ch; margin: 24px auto 0; }
 .connections__sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
 @media (max-width: 900px) {
   .connections { padding-top: 72px; }
@@ -43,7 +43,7 @@ button.connection-word:focus-visible { outline: 2px solid #65d0ff; outline-offse
 }
 @media (max-width: 650px) {
   .connections { padding-block: 56px 48px; }
-  .connections__description { max-width: 31ch; font-size: .95rem; }
+  .connections__description { max-width: 31ch; font-size: var(--font-reading-mobile); }
   .connection-cloud__words { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: center; gap: 14px 24px; }
   .connection-cloud__row { display: contents; }
   .connection-cloud .connection-cloud__row li { transform: none; margin-inline: 0; }
@@ -51,7 +51,7 @@ button.connection-word:focus-visible { outline: 2px solid #65d0ff; outline-offse
   .connection-word--2 { font-size: clamp(1.3rem, 4.9vw, 1.8rem); }
   .connection-word--3 { font-size: clamp(1rem, 3.8vw, 1.3rem); }
   .connection-word--4 { font-size: .9rem; }
-  .connection-cloud__discovery { margin-top: 24px; height: 430px; }
+  .connection-cloud__discovery { margin-top: 24px; height: 500px; }
   .connection-cloud__close { right: -4px; }
   .connections__closing { margin-top: 24px; }
   .connections__closing-lead { font-size: clamp(1.85rem, 6.6vw, 2.7rem); }

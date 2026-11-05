@@ -1,5 +1,6 @@
 import { useState, useSyncExternalStore } from 'react';
 import { motion, useReducedMotion } from 'motion/react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { getMemoryImages } from '../content/memoryImages.js';
 import './MemoryGallery.css';
 
@@ -30,8 +31,11 @@ export default function MemoryGallery({ experience }) {
   const mobile = useSyncExternalStore(subscribeToViewport, isMobileViewport, () => true);
   const reduce = useReducedMotion();
   const images = getMemoryImages(experience.images).slice(0, experience.maxImages ?? 5);
+  const [page, setPage] = useState(0);
+  const pageCount = Math.ceil(images.length / 2);
+  const currentPage = Math.max(0, Math.min(page, pageCount - 1));
   // Limitar antes de montar evita baixar secundárias que não serão vistas no mobile.
-  const visible = mobile ? images.slice(0, 2) : images;
+  const visible = mobile ? images.slice(currentPage * 2, currentPage * 2 + 2) : images;
   return <figure className="memory-gallery" data-count={images.length} data-visible-count={visible.length}>
     <div className="memory-gallery__canvas">
       {visible.length ? visible.map((image, index) => <motion.div key={image.src}
@@ -47,6 +51,11 @@ export default function MemoryGallery({ experience }) {
         {experience.emptyMessage ? <p>{experience.emptyMessage}</p> : <><span aria-hidden="true">↗</span><p>Uma história para compartilhar.</p><small>Em breve, um registro deste encontro.</small></>}
       </div>}
     </div>
-    <figcaption>{experience.caption}{mobile && images.length > visible.length && <span> · {visible.length} de {images.length} registros</span>}</figcaption>
+    <figcaption>{experience.caption}</figcaption>
+    {mobile && pageCount > 1 && <div className="memory-gallery__pagination" role="group" aria-label="Navegação dos registros">
+      <button type="button" aria-label="Registros anteriores" disabled={currentPage === 0} onClick={() => setPage(currentPage - 1)}><ChevronLeft size={18} aria-hidden="true" /></button>
+      <span role="status">{currentPage * 2 + 1}–{currentPage * 2 + visible.length} de {images.length} registros</span>
+      <button type="button" aria-label="Próximos registros" disabled={currentPage === pageCount - 1} onClick={() => setPage(currentPage + 1)}><ChevronRight size={18} aria-hidden="true" /></button>
+    </div>}
   </figure>;
 }

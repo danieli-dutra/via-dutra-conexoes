@@ -7,7 +7,7 @@
 .contribution .knowledge-convergence { display: block; width: 100%; max-width: 460px; height: auto; margin-block: 22px 36px; overflow: visible; }
 .knowledge-convergence path { fill: none; stroke: var(--brand-primary); stroke-width: 1; opacity: .32; }
 .knowledge-convergence path:nth-of-type(2) { stroke: var(--brand-accent); opacity: .45; }
-.knowledge-convergence text { fill: var(--text-secondary); font: 500 16px var(--body-family); }
+.knowledge-convergence text { fill: var(--text-secondary); font: 500 18px var(--body-family); }
 .knowledge-convergence .knowledge-destination { text-anchor: end; }
 .knowledge-convergence circle { fill: var(--brand-accent); }
 .contribution .perspective-concepts { --concept-gap: 36px; --marker-size: 48px; display: grid; gap: var(--concept-gap); }
@@ -16,7 +16,7 @@
 .contribution .perspective-number { position: relative; z-index: 1; display: flex; align-items: center; justify-content: center; width: var(--marker-size); height: var(--marker-size); border: 1px solid color-mix(in srgb, var(--brand-accent) 55%, transparent); border-radius: 50%; background: var(--background); font-size: .75rem; font-weight: 600; color: var(--brand-accent); font-variant-numeric: tabular-nums; transition: transform 240ms ease, border-color 240ms ease, background-color 240ms ease; }
 .contribution .perspective-concept > div { padding-top: 5px; }
 .contribution .perspective-concept h3 { font-size: clamp(1.25rem, 1.65vw, 1.65rem); line-height: 1.18; letter-spacing: -.025em; transition: color 240ms ease; }
-.contribution .perspective-concept p { font-size: .95rem; line-height: 1.6; margin-top: 10px; max-width: 43ch; }
+.contribution .perspective-concept p { font-size: 1.0625rem; line-height: 1.65; margin-top: 10px; max-width: 43ch; }
 .contribution .perspective-concept:is(:hover, :focus-visible) .perspective-number { transform: scale(1.04); border-color: var(--brand-accent); background: color-mix(in srgb, var(--brand-accent) 5%, var(--background)); }
 .contribution .perspective-concept:is(:hover, :focus-visible) h3 { color: var(--brand-accent); }
 .contribution .perspective-concept:is(:hover, :focus-visible)::after { background: color-mix(in srgb, var(--brand-accent) 55%, transparent); }
