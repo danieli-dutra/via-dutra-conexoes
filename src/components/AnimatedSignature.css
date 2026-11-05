@@ -1,0 +1,18 @@
+.animated-signature { width: min(100%, 500px); margin: 40px auto 0; }
+.animated-signature svg { display: block; width: 100%; height: auto; overflow: visible; }
+.animated-signature__stroke { stroke-width: 3; stroke-dasharray: 1; stroke-dashoffset: 1; opacity: 0; }
+.animated-signature__stroke--danieli { stroke: var(--text-primary); }
+.animated-signature__stroke--dutra { stroke: var(--brand-primary); }
+.animated-signature[data-state="drawing"] .animated-signature__stroke { animation: signature-pen var(--signature-duration) cubic-bezier(.35, 0, .65, 1) var(--signature-delay) 1 both; }
+.animated-signature[data-state="complete"] .animated-signature__stroke { stroke-dashoffset: 0; opacity: 1; }
+@keyframes signature-pen {
+  0% { stroke-dashoffset: 1; opacity: 0; }
+  1% { opacity: 1; }
+  100% { stroke-dashoffset: 0; opacity: 1; }
+}
+@media (max-width: 650px) {
+  .animated-signature { margin-top: 32px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .animated-signature .animated-signature__stroke { animation: none !important; stroke-dashoffset: 0; opacity: 1; }
+}

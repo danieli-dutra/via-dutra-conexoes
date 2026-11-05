@@ -1,11 +1,13 @@
 ﻿import { useEffect, useState } from 'react';
 import { MotionConfig, motion, useReducedMotion } from 'motion/react';
-import { ArrowUpRight, ArrowUp } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 import { journey as j } from './content/journey.js';
 import Reveal from './components/Reveal.jsx';
 import JourneyMap from './components/JourneyMap.jsx';
 import ProductVideo from './components/ProductVideo.jsx';
 import ProcessCycle from './components/ProcessCycle.jsx';
+import ConnectionCloud from './components/ConnectionCloud.jsx';
+import Footer from './components/Footer.jsx';
 import Repertoire from './components/Repertoire.jsx';
 import D2BGallery from './components/D2BGallery.jsx';
 import './components/Purpose.css';
@@ -125,7 +127,6 @@ function Contribution() {
         </div>
         <ProcessCycle />
       </div>
-      <div className="closing-row"><p className="closing">{j.closing}</p><a className="back" href="#quem-sou">{j.back}<ArrowUp size={20} aria-hidden="true" /></a></div>
     </div>
   </section>;
 }
@@ -134,6 +135,7 @@ export default function App() {
   return <MotionConfig reducedMotion="user">
     <a className="skip-link" href="#conteudo">{j.skip}</a>
     <header className="site-header shell"><a className="brand" href="#quem-sou"><b aria-hidden="true">d<span>·</span></b><span>{j.subtitle}</span></a><Navigation /></header>
-    <main id="conteudo"><Identity /><Purpose /><Contribution /></main>
+    <main id="conteudo"><Identity /><Purpose /><Contribution /><ConnectionCloud /></main>
+    <Footer />
   </MotionConfig>;
 }

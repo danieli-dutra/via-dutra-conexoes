@@ -1,0 +1,31 @@
+.journey-footer { background: linear-gradient(180deg, var(--background), #081229); border-top: 1px solid color-mix(in srgb, var(--brand-primary) 20%, transparent); padding-block: 48px 20px; }
+.journey-footer__inner { display: flex; align-items: center; justify-content: space-between; gap: 40px; padding-bottom: 36px; }
+.journey-footer__signature { display: flex; align-items: center; gap: 24px; }
+.journey-footer__monogram { font: 700 3.9rem/1 var(--heading-family); letter-spacing: -.12em; color: var(--text-primary); padding-right: 8px; }
+.journey-footer__monogram > span { color: var(--brand-primary); }
+.journey-footer__signature strong { display: block; color: var(--text-primary); font: 600 clamp(1.1rem, 1.8vw, 1.55rem)/1.3 var(--heading-family); letter-spacing: .08em; }
+.journey-footer__signature p { font-size: .85rem; color: var(--text-muted); margin-top: 8px; }
+.journey-footer__social { display: flex; align-items: center; gap: clamp(24px, 3vw, 44px); }
+.journey-footer__social a { display: flex; flex-direction: column; align-items: center; gap: 10px; min-width: 64px; padding-block: 4px; color: var(--text-secondary); font-size: .72rem; transition: color 200ms ease; }
+.journey-footer__icon { display: grid; place-items: center; width: 48px; height: 48px; border: 1px solid #ac94ff44; border-radius: 50%; transition: color 200ms ease, border-color 200ms ease, background-color 200ms ease, transform 200ms ease; }
+.journey-footer__social a:hover { color: var(--brand-accent); }
+.journey-footer__social a:hover .journey-footer__icon { color: var(--brand-accent); border-color: var(--brand-accent); background: #00b7ff0a; transform: translateY(-3px); }
+.journey-footer__social a:focus-visible, .journey-footer__back:focus-visible { color: var(--brand-accent); outline: 2px solid var(--brand-accent); outline-offset: 6px; border-radius: 3px; }
+.journey-footer__social a:focus-visible .journey-footer__icon { border-color: var(--brand-accent); }
+.journey-footer__bottom { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding-top: 16px; border-top: 1px solid #ac94ff1f; }
+.journey-footer__bottom p { font-size: .7rem; color: var(--text-muted); }
+.journey-footer__back { display: inline-flex; align-items: center; gap: 12px; min-height: 44px; color: var(--brand-primary); font-size: .75rem; transition: color 200ms ease; }
+.journey-footer__back:hover { color: var(--brand-accent); }
+.journey-footer__sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+@media (max-width: 650px) {
+  .journey-footer { padding-top: 32px; }
+  .journey-footer__inner { flex-direction: column; align-items: start; gap: 28px; padding-bottom: 28px; }
+  .journey-footer__signature { gap: 20px; }
+  .journey-footer__monogram { font-size: 3.3rem; }
+  .journey-footer__social { gap: 28px; }
+  .journey-footer__bottom { gap: 12px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .journey-footer__social a, .journey-footer__icon, .journey-footer__back { transition: none; }
+  .journey-footer__social a:hover .journey-footer__icon { transform: none; }
+}
